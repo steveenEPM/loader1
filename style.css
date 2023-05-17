@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.load{
+    height: 250px;
+    width: 200px;
+    border-radius:155px 155px 10px 10px;
+    position: relative;
+    background-image: linear-gradient(
+        #52B69A 25%,
+        #34A0A4 25%,
+        #34A0A4 25%,
+        #168AAD 50%,
+        #1A759F 50%,
+        #1A759F 50%,
+        #1A759F 75%,
+        #1E6091 75%
+    );
+
+    background-position: 0px 0px;
+    background-size: auto 175px;
+    background-repeat: repeat-y;
+    animation: coloGrad 6s linear infinite;
+}
+
+.load::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    width: 15px;
+    height: 100px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: rgba(52, 160, 164, 0.5);
+}
+
+.load::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,0);
+    box-shadow: 0px 15px 2px rgba(0, 0, 0, 0.5);
+    width: 32px;
+    height: 45px;
+    background: #E09C5F;
+    border-radius: 0 0 12px 12px;
+}
+
+@keyframes coloGrad {
+    to {
+      background-position: 0 175px
+    }
+  }
